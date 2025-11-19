@@ -1,16 +1,6 @@
-Here is the **raw source code** of the `README.md` file — exactly as Markdown text.
-Just copy-paste into a file named **README.md**.
-
----
-
-# ✅ **README.md (Source Code)**
-
-*(Copy everything below into README.md)*
-
-```markdown
 # 📘 Streamlit RAG + Tools Agent (LangGraph Version)
 
-## 🚀 Overview  
+## 🚀 Overview
 This project is a **modern** Retrieval-Augmented Generation (RAG) + AI Agent system built using:
 
 - **Streamlit** – UI  
@@ -19,31 +9,32 @@ This project is a **modern** Retrieval-Augmented Generation (RAG) + AI Agent sys
 - **FAISS** – Vector database  
 - **Custom Tools** – Calculator, Web Search, Email Sender, RAG Retrieval  
 
-It lets users:
+It allows users to:
 
 - Upload **PDF / TXT documents**
 - Build a **FAISS vector store**
-- Ask questions from the documents (**RAG**)  
-- Use an **AI Agent** that can call tools automatically  
-- Perform external tasks (web search, calculator, email mock)  
+- Ask questions from the uploaded documents (**RAG**)
+- Use an **AI Agent** that can call tools automatically
+- Perform external tasks (web search, calculator, mock email)
 
-This is the correct approach for **2024–2025 LangChain**, since old agents (`initialize_agent`, `AgentType`, `RetrievalQA`) are deprecated or removed.
+This setup follows the correct approach for **2024–2025 LangChain**, because older components like  
+`initialize_agent`, `AgentType`, and `RetrievalQA` are deprecated or removed.
 
----
 
 ## 📂 Project Structure
-```
+
+```bash
 
 project/
-│── app.py
-│── vec_utils.py
-│── tools.py
-│── requirements.txt
-│── .env
-│── README.md
-└── faiss_index/     (auto-created)
+├── app.py
+├── vec_utils.py
+├── tools.py
+├── requirements.txt
+├── .env
+├── README.md
+└── faiss_index/
 
-````
+```
 
 ---
 
