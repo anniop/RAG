@@ -225,9 +225,4 @@ Just ask:
 
 ---
 
-If you want, I can also generate:
-✅ `LICENSE`  
-✅ `.gitignore`  
-✅ GitHub-ready folder structure  
-Just tell me!
-```
+
