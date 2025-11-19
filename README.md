@@ -206,21 +206,6 @@ pip install faiss-cpu
 
 ---
 
-## 🏁 Final Notes
-
-This project is fully compatible with the **latest LangChain + LangGraph (2024–2025)**.
-
-If you want an **advanced version** with:
-
-* Chat history
-* Memory
-* Pinecone / Chroma
-* Authentication
-* Cleaner UI
-
-Just ask:
-👉 **“Upgrade this project to advanced version”**
-
 
 
 
