@@ -1,202 +1,242 @@
-🚀 Overview
------------
+Here is the **raw source code** of the `README.md` file — exactly as Markdown text.
+Just copy-paste into a file named **README.md**.
 
+---
+
+# ✅ **README.md (Source Code)**
+
+*(Copy everything below into README.md)*
+
+```markdown
+# 📘 Streamlit RAG + Tools Agent (LangGraph Version)
+
+## 🚀 Overview  
 This project is a **modern** Retrieval-Augmented Generation (RAG) + AI Agent system built using:
 
-*   **Streamlit** – UI
-    
-*   **LangChain + LangGraph** – Agent & RAG orchestration
-    
-*   **OpenAI** – LLM + Embeddings
-    
-*   **FAISS** – Vector database
-    
-*   **Custom Tools** – Calculator, Web Search, Email Sender, RAG Retrieval
-    
+- **Streamlit** – UI  
+- **LangChain + LangGraph** – Agent & RAG orchestration  
+- **OpenAI** – LLM + Embeddings  
+- **FAISS** – Vector database  
+- **Custom Tools** – Calculator, Web Search, Email Sender, RAG Retrieval  
 
 It lets users:
 
-*   Upload **PDF / TXT documents**
-    
-*   Build a **FAISS vector store**
-    
-*   Ask questions from the documents (**RAG**)
-    
-*   Use an **AI Agent** that can call tools automatically
-    
-*   Perform external tasks (web search, calculator, email mock)
-    
+- Upload **PDF / TXT documents**
+- Build a **FAISS vector store**
+- Ask questions from the documents (**RAG**)  
+- Use an **AI Agent** that can call tools automatically  
+- Perform external tasks (web search, calculator, email mock)  
 
-This is the correct approach for **2024–2025 LangChain**, since old agents (initialize\_agent, AgentType, RetrievalQA) are deprecated or removed.
+This is the correct approach for **2024–2025 LangChain**, since old agents (`initialize_agent`, `AgentType`, `RetrievalQA`) are deprecated or removed.
 
-📂 Project Structure
---------------------
+---
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   project/  │── app.py  │── vec_utils.py  │── tools.py  │── requirements.txt  │── .env  │── README.md  └── faiss_index/     (auto-created)   `
+## 📂 Project Structure
+```
 
-📦 Requirements
----------------
+project/
+│── app.py
+│── vec_utils.py
+│── tools.py
+│── requirements.txt
+│── .env
+│── README.md
+└── faiss_index/     (auto-created)
+
+````
+
+---
+
+## 📦 Requirements
 
 Install dependencies:
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   pip install -r requirements.txt   `
+```bash
+pip install -r requirements.txt
+````
 
 ### Main packages used
 
-*   streamlit
-    
-*   openai
-    
-*   langchain
-    
-*   langchain-openai
-    
-*   langchain-community
-    
-*   langchain-text-splitters
-    
-*   langgraph
-    
-*   faiss-cpu
-    
-*   pdfplumber
-    
+* streamlit
+* openai
+* langchain
+* langchain-openai
+* langchain-community
+* langchain-text-splitters
+* langgraph
+* faiss-cpu
+* pdfplumber
 
-🔑 Environment Variables
-------------------------
+---
 
-Create a file **.env**:
+## 🔑 Environment Variables
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   OPENAI_API_KEY=your_key_here  SERPAPI_API_KEY=optional_key   `
+Create `.env`:
 
-▶️ Running the App
-------------------
+```
+OPENAI_API_KEY=your_key
+SERPAPI_API_KEY=optional
+```
 
-Activate your virtual environment:
+---
+
+## ▶️ Running the App
 
 ### Windows (PowerShell)
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   .\.venv\Scripts\Activate.ps1   `
+```powershell
+.\.venv\Scripts\Activate.ps1
+```
 
 ### macOS / Linux
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   source .venv/bin/activate   `
+```bash
+source .venv/bin/activate
+```
 
 Start Streamlit:
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   streamlit run app.py   `
+```bash
+streamlit run app.py
+```
 
-🧩 Features
------------
+---
+
+## 🧩 Features
 
 ### ✔️ 1. Document Upload
 
 Upload:
 
-*   PDF files
-    
-*   TXT files
-    
+* PDF files
+* TXT files
 
 The app extracts text, chunks it, creates embeddings, and builds a FAISS vector index.
 
-### ✔️ 2. RAG (Retrieval-Augmented Generation)
+---
 
-A custom **retrieval tool** (retrieval) lets the agent fetch relevant chunks:
+### ✔️ 2. Retrieval-Augmented Generation (RAG)
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   Tool(name="retrieval", func=rag_search, ...)   `
+A custom **retrieval tool** allows the agent to fetch relevant chunks:
+
+```python
+Tool(name="retrieval", func=rag_search, ...)
+```
+
+---
 
 ### ✔️ 3. AI Agent with Tools (LangGraph)
 
-The project uses a modern **LangGraph ReAct Agent**:
+Uses a **modern LangGraph ReAct agent**:
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   from langgraph.prebuilt import create_react_agent  agent = create_react_agent(llm, tools)   `
+```python
+from langgraph.prebuilt import create_react_agent
+agent = create_react_agent(llm, tools)
+```
 
-The agent can call:
+The agent can use:
 
-Tool NameFunctionalitycalculatorSafe math evaluatorweb\_searchSerpAPI → DuckDuckGoemail\_senderMock email senderretrievalRAG over uploaded docs
+| Tool Name    | Functionality                   |
+| ------------ | ------------------------------- |
+| calculator   | Safe math evaluator             |
+| web_search   | SerpAPI → DuckDuckGo            |
+| email_sender | Mock email sender               |
+| retrieval    | Search uploaded docs with FAISS |
 
-🛠 Custom Tools
----------------
+---
 
-All custom tools are defined in **tools.py**:
+## 🛠 Custom Tools
 
-*   **calculator** → evaluates expressions like "2+3\*10"
-    
-*   **web\_search** → internet search via SerpAPI or DuckDuckGo
-    
-*   **email\_sender** → mock demonstration tool
-    
-*   **retrieval** → searches FAISS vectorstore using user's uploaded documents
-    
+Defined in **tools.py**:
 
-🧠 How the Agent Works
-----------------------
+* **calculator** – evaluates math expressions
+* **web_search** – searches the web
+* **email_sender** – mock email tool
+* **retrieval** – RAG search in FAISS
 
-The LangGraph agent follows **ReAct pattern**:
+---
 
-*   Looks at your input
-    
-*   Decides whether it needs tool assistance
-    
-*   Calls a tool if needed
-    
-*   Reasons about the tool output
-    
-*   Produces a final answer
-    
+## 🧠 How the Agent Works
 
-🖥 UI Flow (Streamlit)
-----------------------
+The agent follows **ReAct reasoning**:
 
-1.  **Upload docs**
-    
-2.  Build vector index
-    
-3.  Ask a question or command
-    
-4.  Agent responds, optionally calling tools
-    
-5.  Retrieved chunks (RAG context) shown for transparency
-    
+1. Looks at user question
+2. Decides if a tool is needed
+3. Calls tools
+4. Thinks again
+5. Produces final answer
 
-🧪 Example Queries
-------------------
+---
 
-Try:
+## 🖥 UI Flow (Streamlit)
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   summarize the uploaded documents   `
+1. Upload documents
+2. Build vector index
+3. Type a question or command
+4. Agent responds (may call tools)
+5. RAG chunks shown for transparency
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   search the web for latest updates on AI research   `
+---
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   calculate 2*(32/4)+5   `
+## 🧪 Example Queries
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   email_sender john@example.com|Meeting|We have a meeting at 5pm   `
+```
+summarize the uploaded documents
+```
 
-🛑 Troubleshooting
-------------------
+```
+calculate 2*(32/4)+9
+```
 
-### Missing imports (RetrievalQA, initialize\_agent)
+```
+search the web for latest news on AI startups
+```
 
-These are **deprecated**.This project uses **modern LangGraph**, so no deprecated imports are required.
+```
+email_sender john@example.com|Meeting|Let's meet at 6 PM today
+```
 
-### FAISS errors on Windows
+---
 
-Make sure faiss-cpu matches your Python version.
+## 🛑 Troubleshooting
 
-### PDF text not extracted
+### ❌ Missing imports (RetrievalQA, initialize_agent)
 
-Try installing:
+These are **deprecated** in modern LangChain.
+This project uses **LangGraph** instead (recommended by LangChain authors).
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   pip install PyPDF2   `
+### ❌ FAISS errors on Windows
 
-🏁 Final Notes
---------------
+Install compatible version:
 
-This project is fully compatible with **LangChain 2024–2025**, avoids deprecated APIs, and uses LangGraph—the correct agent framework going forward.
+```bash
+pip install faiss-cpu
+```
 
-If you want a **more advanced version** (chat history, memory, Pinecone, auth, better UI), just ask:
+---
 
-➡️ _“Upgrade project to advanced version”_
+## 🏁 Final Notes
 
-Happy building! 🚀
+This project is fully compatible with the **latest LangChain + LangGraph (2024–2025)**.
+
+If you want an **advanced version** with:
+
+* Chat history
+* Memory
+* Pinecone / Chroma
+* Authentication
+* Cleaner UI
+
+Just ask:
+👉 **“Upgrade this project to advanced version”**
+
+```
+
+---
+
+If you want, I can also generate:
+✅ `LICENSE`  
+✅ `.gitignore`  
+✅ GitHub-ready folder structure  
+Just tell me!
+```
