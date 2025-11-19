@@ -1,0 +1,13 @@
+streamlit>=1.20
+python-dotenv
+pdfplumber
+faiss-cpu
+openai>=0.27
+langchain>=0.1.0
+langchain-openai
+langchain-text-splitters
+langchain-community
+tiktoken
+requests
+beautifulsoup4
+PyPDF2
